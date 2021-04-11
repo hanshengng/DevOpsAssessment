@@ -1,5 +1,5 @@
 # task1
-A.Write   a   bash   script   that:  https://github.com/hanshengng/task1/blob/519129b805e89adcac5c91c5737a3b41d60024fe/http_error.sh
+A.Write   a   bash   script   that:  https://github.com/hanshengng/DevOpsAssessment/blob/9ea142edb7e94b553960a6ff6e4e3511306b70b9/task1/http_error.sh
 ●Counts   the   number   of   HTTP   4xx   and   5xx   response   statuses   in   the   apache log   file.   The   filename   would   be   provided   as   a   parameter   to   the   script 
 ●If   the   cumulative   number   of   errors   exceeds   100,   send   an   email   alert reporting   on   the   high   number   of   error   responses   and   relevant   information 
 ●The   script   is   expected   to   be   run   periodically   (e.g.   every   hour)   to   check   if the   threshold   for   the   errors   have   been   met   for   the   period   of   time.
