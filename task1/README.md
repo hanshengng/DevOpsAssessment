@@ -1,32 +1,5 @@
 # task1
-A.Write   a   bash   script   that:  https://github.com/hanshengng/DevOpsAssessment/blob/9ea142edb7e94b553960a6ff6e4e3511306b70b9/task1/http_error.sh
-#
-●Counts   the   number   of   HTTP   4xx   and   5xx   response   statuses   in   the   apache log   file.   The   filename   would   be   provided   as   a   parameter   to   the   script 
-#
-●If   the   cumulative   number   of   errors   exceeds   100,   send   an   email   alert reporting   on   the   high   number   of   error   responses   and   relevant   information 
-#
-●The   script   is   expected   to   be   run   periodically   (e.g.   every   hour)   to   check   if the   threshold   for   the   errors   have   been   met   for   the   period   of   time.
-
-# ==========This will count HTTP 4xx & 5xx =======================================
-LogFile=apache_logs
-#
-CountResponses=$(grep -e "HTTP/1\.1\" 5.." -e "HTTP/1\.1\" 4.." apache_logs | wc -l)
-
-# ==========This will send email alert if errors reached more than 100 ===========
-Email=operations.email@gmail.com
-#
-if [ "$CountResponses" -gt "$Threshold" ]; then
-    grep -e "HTTP/1\.1\" 5.." -e "HTTP/1\.1\" 4.." apache_logs > countresponse_details.txt
-    mail -s "WARNING: '($CountResponses)' total of Error Reponses as of `date`" $Email < countresponse_details.txt
-    #
-fi
-
-# ==========Setting up cron job for it to run periodically ======================
-In linux machine, open crontab –e
-#
-Add a new line below in crobtab file
-#
-0 * * * *{path}/http_error.sh
+A. https://github.com/hanshengng/DevOpsAssessment/blob/main/task1/Task1.pdf
 
 # *******************************************************************
 # B.As   time   passes,   the   log   files   for   your   application   have   piled   up,   and   the   machine is   running   out   of   storage.   Briefly   describe   how   you   would   resolve   this   in   a   short paragraph,   taking   into   considerations   that: 
